@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Students</h2>
+<table class="table">
+   <tr>
+       <th>First name</th>
+       <th>Last name</th>
+       <th>Description</th>
+       <th>Phone</th>
+   </tr>
+   {% for s in student_list %}
+   <tr>
+       <td>{{s.stufname}}</td>
+       <td>{{s.stulname}}</td>
+       <td>{{s.studescription}}</td>
+       <td>{{s.studentphone}}</td>
+   </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}

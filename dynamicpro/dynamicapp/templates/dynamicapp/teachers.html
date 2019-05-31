@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Teachers</h2>
+<table class="table">
+   <tr>
+       <th>First name</th>
+       <th>Last name</th>
+       <th>Description</th>
+       <th>Phone</th>
+   </tr>
+   {% for t in teachers_list %}
+   <tr>
+       <td>{{t.teafname}}</td>
+       <td>{{t.tealname}}</td>
+       <td>{{t.teadescription}}</td>
+       <td>{{s.teaphone}}</td>
+   </tr>
+    {% endfor %}
+
+</table>
+{% endblock %}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+ <html> 
+<head> 
+<title>Python Club</title> 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"> 
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"> 
+<link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'> 
+</head> 
+<body> 
+<div class='jumbotron'> 
+<h1 style="background-color:rgb(19, 52, 124);">Dynamic Trainning center</h1>
+ </div> 
+   <nav class="navbar navbar-default"> 
+   <div class="container-fluid">
+<div class="navbar-header"> 
+    <a class="navbar-brand" href="{% url 'index' %}">Home</a>
+
+</div> 
+<ul class="nav navbar-nav"> 
+    
+    <li><a href="{%url 'courses' %}">Courses</li> 
+    <li><a href="{%url 'students' %}">Students</li> 
+    <li><a href="{%url 'teachers' %}">Teachers</li> 
+    <li><a href="{%url 'grades' %}">grades</li>
+    <li><a href="{%url 'newstudent' %}">Add New Student</a></li> 
+    <li><a href="{%url 'newteacher' %}">Add New Teacher</a></li>
+    <li><a href="{%url 'newcourse' %}">Add New Course</a></li>
+    <li><a href="{%url 'newgrade' %}">Add New Grade</a></li> 
+    <li><a href="{%url 'login' %}">Login</a></li>
+    <li><a href="{%url 'logout' %}">Logout</a></li>
+
+
+</ul> 
+</div> 
+</nav> 
+<div class="container-fluid"> 
+{% block content%}
+
+{% endblock content%}
+
+ 
+</div> 
+</body> 
+</html>
